@@ -44,7 +44,7 @@ namespace CsvHelper.Configuration
 		/// </summary>
 		public virtual List<CsvPropertyReferenceMap> ReferenceMaps
 		{
-			get { return null; /*referenceMaps;*/ }
+			get { return referenceMaps; /*referenceMaps;*/ }
 		}
 
 		/// <summary>
