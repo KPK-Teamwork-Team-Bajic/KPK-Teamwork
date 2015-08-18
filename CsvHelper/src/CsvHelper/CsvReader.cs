@@ -870,15 +870,15 @@ namespace CsvHelper
 			CheckHasBeenRead();
 
 			T record;
-            //try
-            //{
-				record = CreateRecord<T>();
-            //}
-            //catch( Exception ex )
-            //{
-            //    ExceptionHelper.AddExceptionDataMessage( ex, parser, typeof( T ), namedIndexes, currentIndex, currentRecord );
-            //    throw;
-            //}
+            try
+            {
+                record = CreateRecord<T>();
+            }
+            catch (Exception ex)
+            {
+                ExceptionHelper.AddExceptionDataMessage(ex, parser, typeof(T), namedIndexes, currentIndex, currentRecord);
+                throw;
+            }
 			return record;
 		}
 
