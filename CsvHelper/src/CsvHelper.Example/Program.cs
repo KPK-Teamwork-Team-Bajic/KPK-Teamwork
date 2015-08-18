@@ -20,17 +20,17 @@ namespace CsvHelper.Example
 		static void Main( string[] args )
 		{
 			ReadRawFieldsByIndex();
-			//ReadRawFieldsByName();
-			//ReadFieldsByIndex();
-			//ReadRecordsNoAttributes();
-			//ReadRecordsWithAttributes();
-			//ReadAllRecords();
+            ReadRawFieldsByName();
+            ReadFieldsByIndex();
+            ReadRecordsNoAttributes();
+            ReadRecordsWithAttributes();
+            ReadAllRecords();
 
-			//WriteRawFields();
-			//WriteFields();
-			//WriteRecordsNoAttributes();
-			//WriteRecordsWithAttributes();
-			//WriteAllRecords();
+            WriteRawFields();
+            WriteFields();
+            WriteRecordsNoAttributes();
+            WriteRecordsWithAttributes();
+            WriteAllRecords();
 
 			Console.ReadKey();
 		}
@@ -63,7 +63,6 @@ namespace CsvHelper.Example
 					Console.Write( reader.GetField( "String Column" ) + columnSeparator );
 					Console.Write( reader.GetField( "Int Column" ) + columnSeparator );
 					Console.Write( reader.GetField( "Guid Column" ) + columnSeparator );
-					Console.Write( reader.GetField( "Does Not Exist Column" ) + columnSeparator );
 					Console.WriteLine( reader.GetField( "Custom Type Column" ) );
 				}
 			}
@@ -81,7 +80,7 @@ namespace CsvHelper.Example
 				while( reader.Read() )
 				{
 					Console.Write( reader.GetField<string>( 0 ) + columnSeparator );
-					Console.Write( reader.GetField<int>( "Int Column" ) + columnSeparator );
+					Console.Write( reader.GetField<int>( 1 ) + columnSeparator );
 					Console.Write( reader.GetField<Guid>( 2 ) + columnSeparator );
 					Console.WriteLine( reader.GetField<CustomType>( 3, customTypeTypeConverter ) );
 				}
