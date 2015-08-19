@@ -37,7 +37,7 @@ namespace CsvHelper.TypeConversion
 		{
 			try
 			{
-				return Enum.Parse( type, text + "some unneeded string here", true );
+				return Enum.Parse( type, text, true );
 			}
 			catch
 			{

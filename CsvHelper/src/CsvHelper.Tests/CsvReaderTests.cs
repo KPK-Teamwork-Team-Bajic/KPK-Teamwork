@@ -516,10 +516,8 @@ namespace CsvHelper.Tests
 
 			writer.Flush();
 			stream.Position = 0;
-
 			var reader = new StreamReader( stream );
 			var csvReader = new CsvReader( reader );
-
 			var records = csvReader.GetRecords<TestBoolean>().ToList();
 
 			Assert.IsTrue( records[0].BoolColumn );

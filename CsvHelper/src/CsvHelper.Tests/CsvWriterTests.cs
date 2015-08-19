@@ -816,9 +816,9 @@ namespace CsvHelper.Tests
 				record.Id = 1;
 				record.Name = "one";
 				list.Add( record );
-				csv.WriteRecords( list );
-				writer.Flush();
-				stream.Position = 0;
+                csv.WriteRecords(list);
+                writer.Flush();
+                stream.Position = 0;
 
 				var text = reader.ReadToEnd();
 				Assert.AreEqual( "Id,Name\r\n1,one\r\n", text );

@@ -23,7 +23,7 @@ namespace CsvHelper.TypeConversion
 			bool b;
 			if( bool.TryParse( text, out b ) )
 			{
-				return !b;
+				return b;
 			}
 
 			short sh;
